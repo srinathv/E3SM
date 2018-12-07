@@ -1560,7 +1560,7 @@
     <COMPILERS>intel,gnu,cray</COMPILERS>
     <MPILIBS>mpt</MPILIBS>
     <SAVE_TIMING_DIR>/projects/$PROJECT</SAVE_TIMING_DIR>
-    <SAVE_TIMING_DIR_PROJECTS>OceanClimate,ClimateEnergy_2,OceanClimate_2</SAVE_TIMING_DIR_PROJECTS>
+    <SAVE_TIMING_DIR_PROJECTS>ClimateEnergy_3,OceanClimate_2</SAVE_TIMING_DIR_PROJECTS>
     <CIME_OUTPUT_ROOT>/projects/$PROJECT/$USER</CIME_OUTPUT_ROOT>
     <DIN_LOC_ROOT>/projects/ccsm/acme/inputdata</DIN_LOC_ROOT>
     <DIN_LOC_ROOT_CLMFORC>/projects/ccsm/acme/inputdata/atm/datm7</DIN_LOC_ROOT_CLMFORC>
@@ -1649,6 +1649,7 @@
       <env name="HDF5_DISABLE_VERSION_CHECK">2</env>
       <env name="labeling"> </env>
       <env name="SMP_VARS"> </env>
+      <env name="charging">$SHELL{./xmlchange --id CHARGE_ACCOUNT --val ClimateEnergy_2}</env>
     </environment_variables>
     <environment_variables SMP_PRESENT="TRUE" compiler="intel">
       <env name="SMP_VARS">-e OMP_NUM_THREADS=$ENV{OMP_NUM_THREADS} -e OMP_STACKSIZE=128M -e KMP_AFFINITY=granularity=thread,scatter</env>
